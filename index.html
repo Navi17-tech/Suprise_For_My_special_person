@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You — My Valentine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <span class="preloader-heart">♥</span>
+      <p class="preloader-text">Loading something special...</p>
+    </div>
+  </div>
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" role="progressbar" aria-label="Scroll progress"></div>
+
+  <!-- Cursor glow (decorative, doesn't affect accessibility) -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ========== LANDING PAGE ========== -->
+  <section id="landing" class="section landing" data-parallax>
+    <div class="landing-bg"></div>
+    <div class="landing-content">
+      <h1 class="landing-title">Hey Beautiful <span class="heart-icon">❤️</span></h1>
+      <p class="landing-subtitle typing-container">
+        <span class="typing-text" id="typing-text"></span>
+        <span class="typing-cursor">|</span>
+      </p>
+      <button type="button" class="btn-enter" id="btn-enter" aria-label="Enter the experience">
+        Enter My Heart
+      </button>
+    </div>
+    <div class="floating-hearts" aria-hidden="true">
+      <span class="float-heart" data-delay="0">♥</span>
+      <span class="float-heart" data-delay="1">♥</span>
+      <span class="float-heart" data-delay="2">♥</span>
+      <span class="float-heart" data-delay="3">♥</span>
+      <span class="float-heart" data-delay="4">♥</span>
+    </div>
+  </section>
+
+  <!-- ========== MAIN EXPERIENCE (hidden until Enter clicked) ========== -->
+  <main id="main-experience" class="main-experience" aria-hidden="true">
+    <!-- Love Chat -->
+    <section id="chat" class="section chat-section">
+      <div class="chat-hearts-bg" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section-title">Our Little Chat</h2>
+        <div class="chat-window">
+          <div class="chat-header">
+            <div class="chat-avatar chat-avatar-her">
+              <img src="my-image.jpeg" alt="" width="40" height="40"
+                onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle fill=%22%23e8b4b8%22 cx=%2250%22 cy=%2250%22 r=%2250%22/%3E%3Ctext x=%2250%22 y=%2262%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%23faf6f1%22%3E%E2%99%A5%3C/text%3E%3C/svg%3E'">
+            </div>
+            <span class="chat-name">Navi...</span>
+            <span class="chat-status">Online</span>
+          </div>
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages injected by JS -->
+          </div>
+          <div class="chat-typing-indicator" id="typing-indicator" aria-hidden="true">
+            <span class="typing-dots"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memory Gallery -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title">Our Memories</h2>
+        <div class="gallery-grid" id="gallery-grid">
+          <article class="gallery-item"
+            data-caption="“Jis din aap se first baar milna hua tha na… wahi se meri life interesting ho gayi thi 😌❤️ Best starting ever.”">
+            <img src="doreamon image -1.jpg" alt="Memory 1" loading="lazy"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f0e9e0%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22220%22 font-size=%2224%22 text-anchor=%22middle%22 fill=%22%23b76e79%22 font-family=%22serif%22%3EMemory 1%3C/text%3E%3C/svg%3E'">
+          </article>
+          <article class="gallery-item"
+            data-caption="Sach bolu.. To tere saath har chhota sa moment bhi special lagta h. Even jab tu mujhpe gussa hoti h tab bhi 😂❤️">
+            <img src="doreamon image -2.jpg" alt="Memory 2" loading="lazy"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f0e9e0%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22220%22 font-size=%2224%22 text-anchor=%22middle%22 fill=%22%23b76e79%22 font-family=%22serif%22%3EMemory 2%3C/text%3E%3C/svg%3E'">
+          </article>
+          <article class="gallery-item" data-caption="You make ordinary days extraordinary.">
+            <img src="doreamon image -3.jpg" alt="Memory 3" loading="lazy"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f0e9e0%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22220%22 font-size=%2224%22 text-anchor=%22middle%22 fill=%22%23b76e79%22 font-family=%22serif%22%3EMemory 3%3C/text%3E%3C/svg%3E'">
+          </article>
+          <article class="gallery-item" data-caption="Forever grateful for your smile.">
+            <img src="doreamon image -4.jpg" alt="Memory 4" loading="lazy"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f0e9e0%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22220%22 font-size=%2224%22 text-anchor=%22middle%22 fill=%22%23b76e79%22 font-family=%22serif%22%3EMemory 4%3C/text%3E%3C/svg%3E'">
+          </article>
+          <article class="gallery-item" data-caption="Forever grateful for your smile.">
+            <img src="doreamon-image-5.webp" alt="Memory 4" loading="lazy"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f0e9e0%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22220%22 font-size=%2224%22 text-anchor=%22middle%22 fill=%22%23b76e79%22 font-family=%22serif%22%3EMemory 4%3C/text%3E%3C/svg%3E'">
+          </article>
+          <article class="gallery-item" data-caption="Forever grateful for your smile.">
+            <img src="doreamon-image-6.jpg" alt="Memory 4" loading="lazy"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f0e9e0%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22220%22 font-size=%2224%22 text-anchor=%22middle%22 fill=%22%23b76e79%22 font-family=%22serif%22%3EMemory 4%3C/text%3E%3C/svg%3E'">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <button type="button" class="modal-close" aria-label="Close">×</button>
+        <img class="modal-image" src="" alt="">
+        <p class="modal-caption"></p>
+      </div>
+    </div>
+
+    <!-- Why I Love You - Flip cards -->
+    <section id="love-cards" class="section love-cards-section">
+      <div class="container">
+        <h2 class="section-title">Why I Love You</h2>
+        <div class="cards-grid">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <span class="flip-icon">✦</span>
+                <h3>Respect</h3>
+              </div>
+              <div class="flip-back">
+                <p>You treat everyone with kindness and see the best in people. That respect you show the world is what
+                  I admire most.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <span class="flip-icon">✦</span>
+                <h3>Joy</h3>
+              </div>
+              <div class="flip-back">
+                <p>Your laugh is my favorite sound. You bring light into every room and make even the hardest days feel
+                  okay.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <span class="flip-icon">✦</span>
+                <h3>Admiration</h3>
+              </div>
+              <div class="flip-back">
+                <p>I admire your strength, your dreams, and the way you never give up. You inspire me to be better every
+                  day.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Surprise Gift -->
+    <section id="gift" class="section gift-section">
+      <div class="container">
+        <h2 class="section-title">A Little Surprise</h2>
+        <div class="gift-wrapper">
+          <div class="gift-box" id="gift-box" role="button" tabindex="0" aria-label="Open gift box">
+            <div class="gift-glow"></div>
+            <div class="gift-lid"></div>
+            <div class="gift-body"></div>
+            <div class="gift-ribbon-v"></div>
+            <div class="gift-ribbon-h"></div>
+            <div class="gift-bow"></div>
+          </div>
+          <p class="gift-hint">Click to open</p>
+        </div>
+        <div id="gift-message" class="gift-message-overlay" aria-hidden="true">
+          <div class="gift-reveal-hearts" aria-hidden="true"></div>
+          <div class="gift-reveal-container">
+            <div class="gift-reveal-images" id="gift-reveal-images">
+              <div class="gift-reveal-cell"><img src="gift-1.jpg" alt="Our memory" class="gift-reveal-img"
+                  data-fallback="1"></div>
+              <div class="gift-reveal-cell"><img src="gift-2.jpg" alt="Our memory" class="gift-reveal-img"
+                  data-fallback="2"></div>
+              <div class="gift-reveal-cell"><img src="gift-3.jpg" alt="Our memory" class="gift-reveal-img"
+                  data-fallback="3"></div>
+              <div class="gift-reveal-cell"><img src="gift-4.jpg" alt="Our memory" class="gift-reveal-img"
+                  data-fallback="4"></div>
+            </div>
+            <p class="gift-reveal-emoji-line">❤️ 🌹 💕 ✨ 💖 ✨ 💕 🌹 ❤️</p>
+            <p class="gift-reveal-title">For you, with love ♥</p>
+            <p class="gift-reveal-emoji-line">💝 ♥ 💗 ♥ 💝</p>
+            <div class="gift-message-box">
+              <h3>My Love Letter</h3>
+              <p class="love-letter-text">
+                Sach bolu raccoon… galti mostly meri hi hoti h aur tu gussa ho jati h 😅
+                Par phir bhi rukti h mere saath, clg ke baad wait karti h, aur jab baat hoti h to seedha 1–2 ghante
+                nikal jate h…
+
+                Faculty ko bhi lagta h kuch chal raha h… shayad unhe thoda sahi hi lagta h 😌
+
+                Aur haan… main hi bolta hu na ki tere andar 3 ladkiyan rehti h 😏
+                Ek cute wali,
+                ek full gusse wali(Kalratri),
+                aur ek sabse zyada caring wali ❤️
+                Par sach bataun… mujhe teeno pasand h.
+
+                Thank you mere saath rehne ke liye, irritate hone ke baad bhi wapas normal ho jane ke liye, aur meri
+                boring life ko thoda interesting banane ke liye.
+
+                Happy Valentine’s Day doreamon ❤️
+                Forever wala scene h… exit option nahi h 😌”
+              </p>
+              <button type="button" class="btn-close-gift" id="btn-close-gift">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Proposal -->
+    <section id="proposal" class="section proposal-section">
+      <div class="proposal-bg"></div>
+      <div class="container">
+        <div class="proposal-content">
+          <h2 class="proposal-question" id="proposal-question">Will You Be My Forever Valentine?</h2>
+          <div class="proposal-buttons">
+            <button type="button" class="btn-proposal btn-yes" id="btn-yes">YES ❤️</button>
+            <button type="button" class="btn-proposal btn-always" id="btn-always">ALWAYS ❤️</button>
+          </div>
+          <p class="proposal-final-message" id="proposal-final" aria-live="polite"></p>
+        </div>
+        <div class="proposal-screen-glow" id="proposal-screen-glow" aria-hidden="true"></div>
+        <div class="proposal-ring-hearts" id="proposal-ring-hearts" aria-hidden="true"></div>
+        <div class="music-control">
+          <button type="button" class="btn-music" id="btn-music" aria-label="Play background music">
+            <span class="icon-music">♪</span>
+            <span class="music-label">Music</span>
+          </button>
+        </div>
+      </div>
+      <div id="heart-explosion" class="heart-explosion" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <!-- Gift overlay (outside main so it covers full screen when open) -->
+  <div id="gift-message" class="gift-message-overlay" aria-hidden="true">
+    <div class="gift-reveal-hearts" aria-hidden="true"></div>
+    <div class="gift-reveal-container">
+      <div class="gift-reveal-images" id="gift-reveal-images">
+        <div class="gift-reveal-cell"><img src="gift-1.jpg" alt="Our memory" class="gift-reveal-img"
+            data-fallback="1"></div>
+        <div class="gift-reveal-cell"><img src="gift-2.jpg" alt="Our memory" class="gift-reveal-img"
+            data-fallback="2"></div>
+        <div class="gift-reveal-cell"><img src="gift-3.jpg" alt="Our memory" class="gift-reveal-img"
+            data-fallback="3"></div>
+        <div class="gift-reveal-cell"><img src="gift-4.jpg" alt="Our memory" class="gift-reveal-img"
+            data-fallback="4"></div>
+      </div>
+      <p class="gift-reveal-emoji-line">❤️ 🌹 💕 ✨ 💖 ✨ 💕 🌹 ❤️</p>
+      <p class="gift-reveal-title">For you, with love ♥</p>
+      <p class="gift-reveal-emoji-line">💝 ♥ 💗 ♥ 💝</p>
+      <div class="gift-message-box">
+        <h3>My Love Letter</h3>
+        <p class="love-letter-text">
+          Sach bolu to… galti mostly meri hi hoti h aur tu gussa ho jati h 😅
+          Par phir bhi rukti h mere saath, clg ke baad wait karti h, aur jab baat hoti h to seedha 1–2 ghante nikal jate
+          h…
+
+          Faculty ko bhi lagta h kuch chal raha h… shayad unhe thoda sahi hi lagta h 😌
+
+          Aur haan… main hi bolta hu na ki tere andar 3 ladkiyan rehti h 😏
+          Ek cute wali,
+          ek full gusse wali(Kalratri),
+          aur ek sabse zyada caring wali ❤️
+          Par sach bataun… mujhe teeno pasand h.
+
+          Thank you mere saath rehne ke liye, irritate hone ke baad bhi wapas normal ho jane ke liye, aur meri boring
+          life ko thoda interesting banane ke liye.
+
+          Happy Valentine’s Day doreamon ❤️
+          Forever wala scene h… exit option nahi h 😌"
+        </p>
+        <button type="button" class="btn-close-gift" id="btn-close-gift">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background audio: add your file as assets/song.mp3 or assets/music.mp3 -->
+  <audio id="bg-music" loop preload="auto" playsinline>
+    <source src="song.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating music button (visible after Enter) so music can start from anywhere -->
+  <div class="music-float-wrap hidden" id="music-float-wrap" aria-hidden="true">
+    <button type="button" class="btn-music-float" id="btn-music-float" aria-label="Play background music">
+      <span class="icon-music">♪</span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
