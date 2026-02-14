@@ -352,7 +352,7 @@
     var revealImgs = giftRevealImages ? giftRevealImages.querySelectorAll('.gift-reveal-img') : [];
     for (var i = 0; i < revealImgs.length; i++) {
       var img = revealImgs[i];
-      var originalSrc = img.getAttribute('src') || ('assets/gift-' + (i + 1) + '.jpg');
+      var originalSrc = img.getAttribute('src') || ('gift-' + (i + 1) + '.jpg');
       img.setAttribute('data-src', originalSrc);
       setGiftRevealImageFallback(img, i);
       img.src = originalSrc;
@@ -545,3 +545,4 @@
   initParallax();
   updateScrollProgress();
 })();
+
